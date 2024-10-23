@@ -25,8 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="h-screen w-screen bg-black">
-        <div className="h-full w-full bg-black flex-col z-10 relative pt-10">
+      <div className="h-screen w-screen bg-black flex-col">
           <div className="h-1/12 w-full font-monument text-white text-5xl flex-col items-center">
             <div className="flex items-center justify-center h-full ">
               <img src="/leftarrow.png"></img>
@@ -195,9 +194,7 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <img className="z-0 absolute -bottom-32 mt-20" src="/globe.png"></img>
         </div>
-      </div>
     </>
   );
 }
