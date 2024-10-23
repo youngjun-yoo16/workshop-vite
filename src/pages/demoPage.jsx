@@ -6,8 +6,9 @@ export default function DemoPage() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="h-screen w-screen bg-black">
-      <div className="h-full w-full bg-black flex-col z-10 relative pt-10">
+    
+    <div className="h-screen w-screen bg-black overflow-hidden">
+      <div className="h-full w-full bg-black flex-col relative pt-10">
         {/* Header */}
         <div className="h-1/12 w-full font-monument text-white text-5xl flex-col items-center">
           <div className="flex items-center justify-center h-full ">
@@ -57,7 +58,7 @@ export default function DemoPage() {
 
         {/* Footer */}
         <div className="w-full flex gap-10 font-monument text-base bg-black text-white pt-16">
-          <div className="flex-col px-8 pt-16 z-10">
+          <div className="flex-col px-8 pt-16">
             <h1 className="pb-4 text-htfgreen">CONTACT US</h1>
             <h1>htfpurdue@gmail.com</h1>
             <div className="flex text-4xl pt-4 gap-4">
@@ -77,8 +78,9 @@ export default function DemoPage() {
             <img src="/Logo.png" className="h-12 w-42 pl-12 mb-8 ml-6 object-right" alt="Logo" />
             <h1 className="text-right">Purdue University, West Lafayette, IN, 47906</h1>
           </div>
+          <img className=" absolute overflow-hidden -bottom-24 mt-20" src="/globe.png" alt="Globe Background" />
         </div>
-        <img className="z-0 absolute -bottom-32 mt-20" src="/globe.png" alt="Globe Background" />
+
       </div>
     </div>
   );
