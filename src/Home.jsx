@@ -27,9 +27,9 @@ export default function Home() {
     <>
       <div className="h-screen w-screen bg-black flex-col">
           <div className="h-1/12 w-full font-monument text-white text-5xl flex-col items-center">
-            <div className="flex items-center justify-center h-full py-8 ">
+            <div className="flex items-center justify-center  h-full py-8 ">
               <img src="/leftarrow.png"></img>
-              <h1 className="pt-2 mx-8">[enter team name]</h1>
+              <h1 className="pt-2 mx-8 animate-text">Dream Team</h1>
               <img src="/rightarrow.png"></img>
             </div>
           </div>
