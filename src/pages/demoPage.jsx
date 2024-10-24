@@ -23,7 +23,7 @@ export default function DemoPage() {
         <div className="w-full h-3/6 flex flex-col items-center mt-4 pt-12">
           {/* Profile Picture */}
           <img
-            src="/default.png" // Placeholder image
+            src="default.png" // Placeholder image
             alt="Profile Picture"
             className={`w-48 h-48 object-cover ${
               isHovered ? "scale-110" : "scale-100"
@@ -70,11 +70,11 @@ export default function DemoPage() {
         </div>
 
         {/* Footer */}
-        <div className="w-full mt-8 flex gap-10 font-monument text-base bg-black text-white pt-20">
+        <div className="w-full flex gap-10 font-monument text-base bg-black text-white pt-20">
           <div className="flex-col px-8 pt-16">
             <h1 className="pb-4 text-htfgreen">CONTACT US</h1>
             <h1>htfpurdue@gmail.com</h1>
-            <div className="flex text-4xl pt-4 gap-4">
+            <div className="flex absolute z-10 text-4xl pt-4 gap-4">
               <a
                 href="https://www.linkedin.com/company/hack-the-future-at-purdue/"
                 target="_blank"
@@ -110,7 +110,7 @@ export default function DemoPage() {
             </h1>
           </div>
           <img
-            className="absolute overflow-hidden bottom-0 "
+            className="absolute overflow-hidden bottom-0 z-0 "
             src="/globe.png"
             alt="Globe Background"
           />
