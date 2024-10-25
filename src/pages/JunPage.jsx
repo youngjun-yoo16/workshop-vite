@@ -57,13 +57,13 @@ export default function JunPage() {
 
           {/* Contact Links */}
           <div className="flex mt-8 gap-8 z-10">
-            <a href="https://www.linkedin.com/in/ryanerickson680/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/youngjun-yoo/" target="_blank" rel="noreferrer">
               <FaLinkedin className="text-white text-4xl hover:animate-pop cursor-pointer" />
             </a>
-            <a href="https://github.com/RyanErickson680" target="_blank" rel="noreferrer">
+            <a href="https://github.com/youngjun-yoo16" target="_blank" rel="noreferrer">
               <FaGithubSquare className="text-white text-4xl hover:animate-pop cursor-pointer" />
             </a>
-            <a href="https://www.instagram.com/erickson_ryan/" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/y_jun.y/" target="_blank" rel="noreferrer">
               <FaInstagram className="text-white text-4xl hover:animate-pop cursor-pointer" />
             </a>
           </div>
