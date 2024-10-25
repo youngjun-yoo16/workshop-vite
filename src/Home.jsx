@@ -7,13 +7,12 @@ export default function Home() {
   const [showOutline, setShowOutline] = useState(false);
 
   // Names and images for each profile 
-  const profileData = [
-    { name: "Ryan(Demo)", imageSrc: "/ryanpic.jpg" },  // Feel free to remove demo page whenever you want
-    { name: "Person1", imageSrc: "/defaultpfp.jpg" },
+  const profileData = [ // Feel free to remove demo page whenever you want
+    { name: "Jun", imageSrc: "/junpic.jpg" },
     { name: "Person2", imageSrc: "/defaultpfp.jpg" },
-    { name: "Person3", imageSrc: "/defaultpfp.jpg" },
+    { name: "Ben", imageSrc: "/benpic.jpeg" },
     { name: "Person4", imageSrc: "/defaultpfp.jpg" },
-    { name: "Person5", imageSrc: "/defaultpfp.jpg" },
+    { name: "Pratham", imageSrc: "/pratham_pic.jpg" },
     { name: "Person6", imageSrc: "/defaultpfp.jpg" },
     { name: "Person7", imageSrc: "/defaultpfp.jpg" },
     { name: "Partth", imageSrc: "/Partth_Kulkarni.jpg" },
