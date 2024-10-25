@@ -1,200 +1,87 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { Link } from "react-router-dom";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithubSquare } from "react-icons/fa";
-//import "@splidejs/splide/dist/css/splide.min.css";
+import { FaInstagram, FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 export default function Home() {
-  const [me, onMe] = useState(true);
-  const [vp, onVp] = useState(true);
-  const [treasurer, onTreasurer] = useState(true);
-  const [designer, onDesigner] = useState(true);
-  const [tech, onTech] = useState(true);
-  const [secretary, onSecretary] = useState(true);
-  const isHovered = (event) => {
-    event.target.classList.add("gradient");
-    document.getElementById("home")?.classList.remove("gradient");
-  };
 
-  const unHovered = (event) => {
-    event.target.classList.remove("gradient");
-    document.getElementById("home")?.classList.add("gradient");
+  const [showOutline, setShowOutline] = useState(false);
+
+  // Names and images for each profile 
+  const profileData = [
+    { name: "Ryan(Demo)", imageSrc: "/ryanpic.jpg" },  // Feel free to remove demo page whenever you want
+    { name: "Person1", imageSrc: "/defaultpfp.jpg" },
+    { name: "Person2", imageSrc: "/defaultpfp.jpg" },
+    { name: "Person3", imageSrc: "/defaultpfp.jpg" },
+    { name: "Person4", imageSrc: "/defaultpfp.jpg" },
+    { name: "Person5", imageSrc: "/defaultpfp.jpg" },
+    { name: "Person6", imageSrc: "/defaultpfp.jpg" },
+    { name: "Person7", imageSrc: "/defaultpfp.jpg" },
+    { name: "Person8", imageSrc: "/defaultpfp.jpg" },
+    { name: "Person9", imageSrc: "/defaultpfp.jpg" },
+    { name: "Person10", imageSrc: "/defaultpfp.jpg" }
+  ];
+
+  const toggleOutline = () => {
+    setShowOutline((prev) => !prev);
   };
 
   return (
     <>
-      <div className="h-screen w-screen bg-black flex-col">
-          <div className="h-1/12 w-full font-monument text-white text-5xl flex-col items-center">
-            <div className="flex items-center justify-center  h-full py-8 ">
-              <img src="/leftarrow.png"></img>
-              <h1 className="pt-2 mx-8 animate-text">Dream Team</h1>
-              <img src="/rightarrow.png"></img>
+      <div className={`min-h-screen w-screen bg-black flex flex-col ${showOutline ? 'outline' : ''}`}>
+        {/* Outline Toggle Button */}
+        <div className="absolute top-4 right-4 flex items-center">
+          <label className="switch">
+            <input type="checkbox" checked={showOutline} onChange={toggleOutline} />
+            <span className="slider round"></span>
+          </label>
+          <span className="ml-2 text-white">Toggle Outline</span>
+        </div>
+
+        <div className="h-1/12 w-full font-monument text-white text-5xl flex items-center justify-center py-8">
+          <img src="/leftarrow.png" alt="Left arrow" />
+          <h1 className="pt-2 mx-8 animate-text">Dream Team</h1>
+          <img src="/rightarrow.png" alt="Right arrow" />
+        </div>
+
+        <div className="w-full flex flex-wrap justify-center px-48 gap-16 mb-12">
+          {profileData.map((profile) => (
+            <div key={profile.name} className="w-48 h-48 flex flex-col items-center font-monument text-xl">
+              <Link to={`/profile/${profile.name}`}>
+                <img
+                  className="profile-img"
+                  src={profile.imageSrc}
+                  alt={`${profile.name}'s profile`}
+                />
+              </Link>
+              <span className="text-white font-semibold mt-2">{profile.name}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="w-full flex gap-10 font-monument text-base bg-black text-white pt-16 mt-auto">
+          <div className="flex-col px-8 pt-16 z-10">
+            <h1 className="pb-4 text-htfgreen">CONTACT US</h1>
+            <h1>htfpurdue@gmail.com</h1>
+            <div className="flex text-4xl pt-4 gap-4">
+              <a href="https://www.instagram.com/hackthefuturepurdue/" target="_blank">
+                <FaInstagram className="hover:animate-pop cursor-pointer" />
+              </a>
+              <a href="https://www.linkedin.com/company/hack-the-future-at-purdue/" target="_blank">
+                <FaLinkedin className="hover:animate-pop cursor-pointer" />
+              </a>
+              <a href="https://github.com/Hack-the-Future" target="_blank">
+                <FaGithubSquare className="hover:animate-pop cursor-pointer" />
+              </a>
             </div>
           </div>
-          <div className="w-full flex h-1/3 px-72 gap-48 mb-12">
-            {vp ? (
-              <img
-                onMouseEnter={() => {
-                  onVp(false);
-                  document.body.style.cursor = "pointer";
-                }}
-                className="scale-50"
-                src="/defaultpfp.jpg"
-              ></img>
-            ) : (
-              <img
-                onMouseLeave={() => {
-                  onVp(true);
-                  document.body.style.cursor = "default";
-                }}
-                onClick={() => window.open("/demo")}
-                className="scale-75 -mr-6"
-                src="/defaultpfp.jpg" //TODO: add photo
-              ></img>
-            )}
-            {me ? (
-              <img
-                onMouseEnter={() => {
-                  onMe(false);
-                  document.body.style.cursor = "pointer";
-                }}
-                className="scale-125 pl-2"
-                src="/tanay.png"
-              ></img>
-            ) : (
-              <img
-                onMouseLeave={() => {
-                  onMe(true);
-                  document.body.style.cursor = "default";
-                }}
-                onClick={() => window.open("https://tanaygondil.com")}
-                className="scale-125 pl-2"
-                src="/tanay-2.png"
-              ></img>
-            )}
-
-            {secretary ? (
-              <img
-                onMouseEnter={() => {
-                  onSecretary(false);
-                  document.body.style.cursor = "pointer";
-                }}
-                className="scale-125"
-                src="/lalitha.png"
-              ></img>
-            ) : (
-              <img
-                onMouseLeave={() => {
-                  onSecretary(true);
-                  document.body.style.cursor = "default";
-                }}
-                onClick={() => window.open("https://www.linkedin.com/in/lalithachandolu/")}
-                className="scale-125"
-                src="/lalitha-2.png"
-              ></img>
-            )}
-          </div>
-          <div className="w-full flex h-1/3 px-72 gap-44">
-            {treasurer ? (
-              <img
-                onMouseEnter={() => {
-                  onTreasurer(false);
-                  document.body.style.cursor = "pointer";
-                }}
-                className="scale-125"
-                src="/sanjana.png"
-              ></img>
-            ) : (
-              <img
-                onMouseLeave={() => {
-                  onTreasurer(true);
-                  document.body.style.cursor = "default";
-                }}
-                onClick={() => window.open("https://www.linkedin.com/in/sanjana-mohan-a81549269/")}
-                className="scale-125"
-                src="/sanjana-2.png"
-              ></img>
-            )}
-            {designer ? (
-              <img
-                onMouseEnter={() => {
-                  onDesigner(false);
-                  document.body.style.cursor = "pointer";
-                }}
-                className="scale-125"
-                src="/vipula.png"
-              ></img>
-            ) : (
-              <img
-                onMouseLeave={() => {
-                  onDesigner(true);
-                  document.body.style.cursor = "default";
-                }}
-                onClick={() => window.open("https://www.linkedin.com/in/vipula-shirse-252ba12a1/")}
-                className="scale-125"
-                src="/vipula-2.png"
-              ></img>
-            )}
-            {tech ? (
-              <img
-                onMouseEnter={() => {
-                  onTech(false);
-                  document.body.style.cursor = "pointer";
-                }}
-                className="scale-125"
-                src="/ryan.png"
-              ></img>
-            ) : (
-              <img
-                onMouseLeave={() => {
-                  onTech(true);
-                  document.body.style.cursor = "default";
-                }}
-                onClick={() => window.open("https://www.linkedin.com/in/ryanerickson680/")}
-                className="scale-125"
-                src="/ryan-2.png"
-              ></img>
-            )}
-          </div>
-          <div className="w-full flex gap-10 font-monument text-base bg-black text-white pt-16">
-            
-
-            <div className="flex-col px-8 pt-16 z-10">
-              <h1 className="pb-4 text-htfgreen">CONTACT US</h1>
-              <h1>htfpurdue@gmail.com</h1>
-              <div className="flex text-4xl pt-4 gap-4">
-
-                  <Link
-                    target="_blank"
-                    href="https://www.linkedin.com/company/hack-the-future-at-purdue/"
-                  >
-                    <FaInstagram className="hover:animate-pop cursor-pointer"></FaInstagram>
-                  </Link>
-                  <a
-                    target="_blank"
-                    href="https://www.instagram.com/hackthefuturepurdue/"
-                  >
-                    <FaLinkedin className="hover:animate-pop cursor-pointer"></FaLinkedin>
-                  </a>
-                  <a target="blank" href="https://github.com/Hack-the-Future">
-                    <FaGithubSquare className="hover:animate-pop cursor-pointer" />
-                  </a>
-                  </div>
-            </div>
-            <div className="flex-col  pt-16 w-1/2"></div>
-            <div className="flex-col justify-right px-8 pt-16">
-              <img
-                src="/Logo.png"
-                className="h-12 w-42 pl-12 mb-8 ml-6 object-right"
-              ></img>
-              <h1 className="text-right">
-                Purdue University, West Lafayette, IN, 47906
-              </h1>
-            </div>
+          <div className="flex-col pt-16 w-1/2"></div>
+          <div className="flex-col justify-right px-8 pt-16">
+            <img src="/Logo.png" className="h-12 w-42 pl-12 mb-8 ml-6 object-right" alt="Logo" />
+            <h1 className="text-right">Purdue University, West Lafayette, IN, 47906</h1>
           </div>
         </div>
+      </div>
     </>
   );
 }
