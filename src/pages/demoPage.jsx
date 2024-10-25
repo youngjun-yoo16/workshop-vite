@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { Link } from "react-router-dom"; // Import Link for navigation
 import { FaInstagram, FaLinkedin, FaGithubSquare } from "react-icons/fa";
@@ -48,9 +47,8 @@ export default function DemoPage() {
             <h2 className="text-4xl font-bold">Ryan Erickson</h2>
             <h3 className="text-xl mt-2">Technical Director</h3>
             <p className="mt-4 text-gray-400 max-w-md">
-              Ryan is a skilled full stack developer with expertise in the MERN
-              stack and a passion for building dynamic, user-friendly
-              applications.
+              Computer science student at Purdue University, from Prior Lake Minnesota.
+              2nd year in Hack the Future, previously a member of YWCA Scheduling team.
             </p>
           </div>
           <Link to="/" className="z-10 mt-6 bg-htfgreen text-white font-bold py-2 px-4 rounded transition duration-300 hover:bg-green-700">

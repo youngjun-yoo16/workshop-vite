@@ -1,5 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
-/* eslint-disable no-unused-vars */
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
@@ -7,12 +5,14 @@ import { useParams } from "react-router-dom";
 import DemoPage from './pages/demoPage.jsx'
 import './index.css'
 import Home from './Home.jsx'
+import Example from './pages/example.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/example' element={<Example />} />
         <Route path='/demo' element={<DemoPage />} />
         <Route path='/profile/:name' element={<ProfileRouter />} />
       </Routes>
