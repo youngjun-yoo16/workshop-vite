@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useParams } from "react-router-dom";
 import DemoPage from './pages/demoPage.jsx'
+import SaumyaPage from './pages/saumyaPage.jsx'
 import './index.css'
 import Home from './Home.jsx'
 import Example from './pages/example.jsx';
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/example' element={<Example />} />
         <Route path='/demo' element={<DemoPage />} />
         <Route path='/profile/:name' element={<ProfileRouter />} />
+        <Route path='/profile/:saumya' element={<saumyaPage />} />
       </Routes>
     </Router>
   </StrictMode>,
@@ -34,8 +36,8 @@ function ProfileRouter() {
       return <DemoPage />;
     case "Person3":
       return <DemoPage />;
-    case "Person4":
-      return <DemoPage />;
+    case "Saumya Gupta":
+      return <SaumyaPage />;
     case "Person5":
       return <DemoPage />;
     case "Person6":
