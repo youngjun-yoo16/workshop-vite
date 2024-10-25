@@ -15,7 +15,7 @@ export default function Home() {
     { name: "Pratham", imageSrc: "/pratham_pic.jpg" },
     { name: "Person6", imageSrc: "/defaultpfp.jpg" },
     { name: "Person7", imageSrc: "/defaultpfp.jpg" },
-    { name: "Person8", imageSrc: "/defaultpfp.jpg" },
+    { name: "Partth", imageSrc: "/Partth_Kulkarni.jpg" },
     { name: "Person9", imageSrc: "/defaultpfp.jpg" },
     { name: "Person10", imageSrc: "/defaultpfp.jpg" }
   ];

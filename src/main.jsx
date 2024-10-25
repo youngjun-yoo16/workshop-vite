@@ -10,6 +10,7 @@ import SaumyaPage from './pages/saumyaPage.jsx'
 import './index.css'
 import Home from './Home.jsx'
 import Example from './pages/example.jsx';
+import MyPage from './pages/myPage.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -48,8 +49,8 @@ function ProfileRouter() {
       return <DemoPage />;
     case "Person7":
       return <DemoPage />;
-    case "Person8":
-        return <DemoPage />;
+    case "Partth":
+        return <MyPage/>;
     case "Person9":
       return <DemoPage />;
     case "Person10":
