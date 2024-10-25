@@ -11,7 +11,7 @@ export default function Home() {
     { name: "Ryan(Demo)", imageSrc: "/ryanpic.jpg" },  // Feel free to remove demo page whenever you want
     { name: "Person1", imageSrc: "/defaultpfp.jpg" },
     { name: "Person2", imageSrc: "/defaultpfp.jpg" },
-    { name: "Person3", imageSrc: "/defaultpfp.jpg" },
+    { name: "Ben", imageSrc: "/benpic.jpeg" },
     { name: "Person4", imageSrc: "/defaultpfp.jpg" },
     { name: "Person5", imageSrc: "/defaultpfp.jpg" },
     { name: "Person6", imageSrc: "/defaultpfp.jpg" },
