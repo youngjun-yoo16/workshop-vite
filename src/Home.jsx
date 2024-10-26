@@ -11,7 +11,7 @@ export default function Home() {
     { name: "Jun", imageSrc: "/junpic.jpg" },
     { name: "Person2", imageSrc: "/defaultpfp.jpg" },
     { name: "Ben", imageSrc: "/benpic.jpeg" },
-    { name: "Saumya Gupta", imageSrc: "/saumya.png" },
+    { name: "Saumya", imageSrc: "/saumya.png" },
     { name: "Pratham", imageSrc: "/pratham_pic.jpg" },
     { name: "Person6", imageSrc: "/defaultpfp.jpg" },
     { name: "Person7", imageSrc: "/defaultpfp.jpg" },

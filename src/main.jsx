@@ -3,14 +3,14 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useParams } from "react-router-dom";
 import DemoPage from './pages/demoPage.jsx'
-import BenPage from './pages/benPage.jsx';
+import BenPage from './pages/BenPage.jsx';
 import JunPage from './pages/JunPage.jsx';
 import PrathamPage from './pages/prathamPage.jsx';
-import SaumyaPage from './pages/saumyaPage.jsx'
+import SaumyaPage from './pages/SaumyaPage.jsx'
 import './index.css'
 import Home from './Home.jsx'
 import Example from './pages/example.jsx';
-import MyPage from './pages/myPage.jsx';
+import PartthPage from './pages/PartthPage.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -41,7 +41,7 @@ function ProfileRouter() {
       return <DemoPage />;
     case "Ben":
       return <BenPage />;
-    case "Saumya Gupta":
+    case "Saumya":
       return <SaumyaPage />;
     case "Pratham":
       return <PrathamPage />;
@@ -50,7 +50,7 @@ function ProfileRouter() {
     case "Person7":
       return <DemoPage />;
     case "Partth":
-        return <MyPage/>;
+        return <PartthPage/>;
     case "Person9":
       return <DemoPage />;
     case "Person10":
