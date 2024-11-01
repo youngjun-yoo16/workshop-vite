@@ -11,7 +11,7 @@ import './index.css'
 import Home from './Home.jsx'
 import Example from './pages/example.jsx';
 import PartthPage from './pages/PartthPage.jsx';
-
+import DhanushriPage from './pages/DhanushriPage.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -53,8 +53,8 @@ function ProfileRouter() {
         return <PartthPage/>;
     case "Person9":
       return <DemoPage />;
-    case "Person10":
-      return <DemoPage />;
+    case "Dhanushri":
+      return <DhanushriPage />;
     default:
       return <div>Profile not found</div>;
   }
